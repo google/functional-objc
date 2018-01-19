@@ -1,0 +1,10 @@
+module FBLFunctional {
+    umbrella header "FBLFunctional.h"
+
+    export *
+
+    header "NSArray+FBLFunctional.h"
+    header "NSDictionary+FBLFunctional.h"
+    header "NSOrderedSet+FBLFunctional.h"
+    header "NSSet+FBLFunctional.h"
+}
