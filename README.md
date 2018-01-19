@@ -101,6 +101,10 @@ Add the following to your `Podfile`:
 
     pod 'FBLFunctional'
 
+Or, if you would also like to include the tests:
+
+    pod 'FBLFunctional', :testspecs => ['FBLFunctionalTests']
+
 Then, run `pod install`.
 
 ### Import
