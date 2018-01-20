@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name        = 'FBLFunctional'
+  s.name        = 'FunctionalObjC'
   s.version     = '1.0'
   s.authors     = 'Google Inc.'
   s.license     = { :type => 'Apache', :file => 'LICENSE' }
@@ -18,10 +18,11 @@ Pod::Spec.new do |s|
   s.osx.deployment_target  = '10.10'
   s.tvos.deployment_target = '9.0'
 
+  s.module_name = 'FBLFunctional'
   s.prefix_header_file = false
-  s.source_files = "Sources/#{s.name}/**/*.{h,m}"
+  s.source_files = "Sources/#{s.module_name}/**/*.{h,m}"
 
   s.test_spec "#{s.name}Tests" do |ts|
-    ts.source_files = "Tests/#{s.name}Tests/*.{h,m}"
+    ts.source_files = "Tests/#{s.module_name}Tests/*.{h,m}"
   end
 end
