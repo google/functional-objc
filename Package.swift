@@ -2,7 +2,7 @@
 // swiftlint:disable trailing_comma
 
 // To generate and open project in Xcode run:
-// swift package generate-xcodeproj && open Functional.xcodeproj
+// swift package generate-xcodeproj && open FBLFunctional.xcodeproj
 
 // Copyright 2018 Google Inc. All rights reserved.
 //
@@ -21,7 +21,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "Functional",
+  name: "FBLFunctional",
   targets: [
     .target(
       name: "FBLFunctional"
