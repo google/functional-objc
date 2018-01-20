@@ -109,10 +109,16 @@ Then, run `pod install`.
 
 ### Import
 
-Import the umbrella header:
+Import the umbrella header as:
 
 ```objectivec
 #import <FBLFunctional/FBLFunctional.h>
+```
+
+Or:
+
+```objectivec
+#import "FBLFunctional.h"
 ```
 
 Or, the module:
