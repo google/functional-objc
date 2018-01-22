@@ -99,11 +99,11 @@ XCTAssertEqualObjects(zippedArray, @[ @[ @13, @"100" ], @[ @42, @"14" ] ]);
 
 Add the following to your `Podfile`:
 
-    pod 'FunctionalObjC'
+    pod 'FunctionalObjC', '~> 1.0'
 
 Or, if you would also like to include the tests:
 
-    pod 'FunctionalObjC', :testspecs => ['Tests']
+    pod 'FunctionalObjC', '~> 1.0', :testspecs => ['Tests']
 
 Then, run `pod install`.
 
