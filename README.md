@@ -103,7 +103,7 @@ Add the following to your `Podfile`:
 
 Or, if you would also like to include the tests:
 
-    pod 'FunctionalObjC', :testspecs => ['FunctionalObjCTests']
+    pod 'FunctionalObjC', :testspecs => ['Tests']
 
 Then, run `pod install`.
 

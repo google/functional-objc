@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.prefix_header_file = false
   s.source_files = "Sources/#{s.module_name}/**/*.{h,m}"
 
-  s.test_spec "#{s.name}Tests" do |ts|
+  s.test_spec "Tests" do |ts|
     ts.source_files = "Tests/#{s.module_name}Tests/*.{h,m}"
   end
 end
