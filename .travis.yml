@@ -4,4 +4,4 @@ before_install:
     - brew update
     - brew install bazel
 script:
-    - bazel test Tests
+    - bazel test Tests --verbose_failures --test_strategy=standalone
