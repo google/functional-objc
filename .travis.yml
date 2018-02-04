@@ -1,0 +1,7 @@
+language: objective-c
+install: true
+before_install:
+    - brew update
+    - brew install bazel
+script:
+    - bazel test Tests
