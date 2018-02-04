@@ -1,7 +1,8 @@
-# Functional operators for Objective-C
-
 [![Apache
-License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg?style=flat)](LICENSE)
+License](https://img.shields.io/github/license/google/functional-objc.svg)](LICENSE)
+[![Travis](https://img.shields.io/travis/google/promises.svg)](https://travis-ci.org/google/functional-objc)
+
+# Functional operators for Objective-C
 
 An Objective-C library of functional operators, derived from `Swift.Sequence`,
 that help you write more concise and readable code for collection
