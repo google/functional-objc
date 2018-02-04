@@ -1,3 +1,4 @@
+os: osx
 language: objective-c
 install: true
 before_install:
