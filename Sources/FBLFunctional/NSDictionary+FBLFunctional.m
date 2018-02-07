@@ -84,6 +84,22 @@ static id __nullable FBLDictionaryReduce(NSDictionary *dictionary, id __nullable
   return result;
 }
 
+static NSDictionary *FBLGroup(NSDictionary *dictionary, id __nullable (^grouper)(id, id)) {
+  NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+  for (id key in dictionary){
+    id groupingKey = grouper(key, dictionary[key]);
+    if ([[result allKeys] containsObject:groupingKey]) {
+      [[result objectForKey:groupingKey] setObject:dictionary[key] forKey:key];
+    } else {
+      NSMutableDictionary *storageDictionary = [[NSMutableDictionary alloc] init];
+      [storageDictionary setValue:dictionary[key] forKey:key];
+      [result setObject:storageDictionary forKey:groupingKey];
+    }
+  }
+  return result;
+}
+
+
 @implementation NSDictionary (FBLFunctionalAdditions)
 
 - (instancetype)fbl_filter:(BOOL (^)(id, id))predicate {
@@ -135,6 +151,12 @@ static id __nullable FBLDictionaryReduce(NSDictionary *dictionary, id __nullable
       [container isKindOfClass:[NSSet class]] || [container isKindOfClass:[NSOrderedSet class]]);
 
   return FBLZip(self, container);
+}
+
+- (NSDictionary *)fbl_groupBy:(id (^)(id, id))grouper {
+  NSParameterAssert(grouper);
+
+  return FBLGroup(self, grouper);
 }
 
 @end

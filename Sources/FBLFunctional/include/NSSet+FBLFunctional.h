@@ -24,6 +24,7 @@ typedef void (^FBLFunctionalSetEnumeratorBlock)(ObjectType value);
 typedef id __nullable (^FBLFunctionalSetMapperBlock)(ObjectType value);
 typedef BOOL (^FBLFunctionalSetPredicateBlock)(ObjectType value);
 typedef id __nullable (^FBLFunctionalSetReducerBlock)(id __nullable accumulator, ObjectType value);
+typedef id __nullable (^FBLFunctionalSetGrouperBlock)(ObjectType value);
 
 /**
  Returns a set containing receiver's elements that satisfy the given predicate.
@@ -67,6 +68,12 @@ typedef id __nullable (^FBLFunctionalSetReducerBlock)(id __nullable accumulator,
  */
 - (NSArray<NSArray *> *)fbl_zip:(id)container NS_SWIFT_UNAVAILABLE("");
 
+/**
+ Returns a dictionary of array grouppings with a corresponding grouping parameter key recieved from the predicate.
+ */
+-(NSDictionary *)fbl_groupBy:(NS_NOESCAPE FBLFunctionalSetGrouperBlock)grouper NS_SWIFT_UNAVAILABLE("");
+
 @end
 
 NS_ASSUME_NONNULL_END
+

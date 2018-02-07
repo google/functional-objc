@@ -26,6 +26,7 @@ typedef BOOL (^FBLFunctionalDictionaryPredicateBlock)(KeyType key, ObjectType va
 typedef id __nullable (^FBLFunctionalDictionaryReducerBlock)(id __nullable accumulator, KeyType key,
                                                              ObjectType value);
 typedef id __nullable (^FBLFunctionalDictionaryValueMapperBlock)(ObjectType value);
+typedef id __nullable (^FBLFunctionalDictionaryGrouperBlock)(KeyType key, ObjectType value);
 
 /**
  Returns a dictionary containing receiver's elements that satisfy the given predicate.
@@ -78,6 +79,13 @@ typedef id __nullable (^FBLFunctionalDictionaryValueMapperBlock)(ObjectType valu
  have different counts, the resulting array is the same count as the shorter container.
  */
 - (NSArray<NSArray *> *)fbl_zip:(id)container NS_SWIFT_UNAVAILABLE("");
+
+/**
+ Returns a dictionary of dictionary grouppings with a corresponding grouping parameter key recieved from the predicate.
+ */
+- (NSDictionary *)fbl_groupBy:
+    (NS_NOESCAPE FBLFunctionalDictionaryGrouperBlock)grouper
+    NS_SWIFT_UNAVAILABLE("");
 
 @end
 

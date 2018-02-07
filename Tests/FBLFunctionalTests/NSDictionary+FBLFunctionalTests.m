@@ -168,4 +168,47 @@
   }
 }
 
+- (void)testGroupByValueDictionary {
+  // Arrange.
+  NSDictionary<NSString *, NSNumber *> *originalDictionary = @{ @"one" : @12, @"two" : @40, @"three" : @13 };
+  NSDictionary<NSString *, NSDictionary<NSString *, NSNumber *> *>
+      *expectedDict = @{
+        @"evenValues" : @{@"one" : @12, @"two" : @40},
+        @"oddValues" : @{@"three" : @13}
+      };
+
+  // Act.
+  NSDictionary<NSString *, NSDictionary<NSString *, NSNumber *> *>
+      *resultingDict = [originalDictionary
+          fbl_groupBy:^NSString *(NSString *key, NSNumber *value) {
+            if (value.integerValue % 2) {
+              return @"oddValues";
+            }
+            return @"evenValues";
+          }];
+
+  // Assert.
+  XCTAssertEqualObjects(resultingDict, expectedDict);
+}
+
+- (void)testGroupByKeyDictionary {
+  // Arrange.
+  NSDictionary<NSString *, NSString *> *originalDictionary = @{ @"animal" : @"cat", @"animal" : @"dog", @"plant" : @"magnolia" };
+  NSDictionary<NSString *, NSDictionary<NSString *, NSString *> *>
+      *expectedDict = @{
+        @"animal" : @{@"animal" : @"cat", @"animal" : @"dog"},
+        @"plant" : @{@"plant" : @"magnolia"}
+      };
+
+  // Act.
+  NSDictionary<NSString *, NSDictionary<NSString *, NSNumber *> *>
+  *resultingDict = [originalDictionary
+                    fbl_groupBy:^NSString *(NSString *key, NSNumber *value) {
+                      return key;
+                    }];
+
+  // Assert.
+  XCTAssertEqualObjects(resultingDict, expectedDict);
+}
+
 @end

@@ -142,4 +142,22 @@
   }
 }
 
+- (void)testGroupByArray {
+  // Arrange.
+  NSArray<NSNumber *> *originalArray = @[ @5, @6, @7 ];
+  NSDictionary<NSString *, NSArray<NSNumber *> *> *expectedDict = @{@"even" : @[ @6 ], @"odd": @[ @5,  @7 ]};
+
+  // Act.
+  NSDictionary<NSString *, NSArray<NSNumber *> *> *resultingDict= [originalArray fbl_groupBy:^id(NSNumber *value) {
+    if (value.integerValue % 2) {
+      return @"odd";
+    }
+    return @"even";
+  }];
+
+  // Assert.
+  XCTAssertEqualObjects(resultingDict, expectedDict);
+}
+
 @end
+

@@ -153,4 +153,24 @@
   }
 }
 
+- (void)testGroupByOrderedSet {
+  // Arrange.
+  NSOrderedSet<NSNumber *> *originalOrderedSet =
+      [NSOrderedSet orderedSetWithArray:@[ @13, @42, @0 ]];
+  NSDictionary<NSString *, NSArray<NSNumber *> *> *expectedDict =
+      @{ @"even" : @[ @42, @0 ],
+         @"odd" : @[ @13 ] };
+
+  // Act.
+  NSDictionary<NSString *, NSArray<NSNumber *> *> *resultingDict = [originalOrderedSet fbl_groupBy:^id(NSNumber *value) {
+    if (value.integerValue % 2) {
+      return @"odd";
+    }
+    return @"even";
+  }];
+
+  // Assert.
+  XCTAssertEqualObjects(resultingDict, expectedDict);
+}
+
 @end
