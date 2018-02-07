@@ -121,6 +121,20 @@ static id __nullable FBLReduce(id<NSFastEnumeration> container, id __nullable in
   return result;
 }
 
+static NSDictionary *FBLGroup(id<NSFastEnumeration> container, id __nullable (^grouper)(id)) {
+  NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+  for (id object in container) {
+    id key = grouper(object);
+    if ([[result allKeys] containsObject:key]) {
+      [[result valueForKey:key] addObject:object];
+    } else {
+      NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:object, nil];
+      [result setObject:array forKey:key];
+    }
+  }
+  return result;
+}
+
 /// Common implementation for NSArray, NSSet and NSOrderedSet to avoid boilerplate code.
 @implementation NSObject (FBLFunctionalAdditions)
 
@@ -181,5 +195,14 @@ static id __nullable FBLReduce(id<NSFastEnumeration> container, id __nullable in
 
   return FBLZip(self, container);
 }
+
+-(NSDictionary *)fbl_groupBy:(id (^)(id))grouper {
+  NSParameterAssert([self isKindOfClass:[NSArray class]] || [self isKindOfClass:[NSSet class]] ||
+                    [self isKindOfClass:[NSOrderedSet class]]);
+  NSParameterAssert(grouper);
+  
+  return FBLGroup((id<NSFastEnumeration>)self, grouper);
+}
+
 
 @end

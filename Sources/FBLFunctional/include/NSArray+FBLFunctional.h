@@ -25,6 +25,7 @@ typedef id __nullable (^FBLFunctionalArrayMapperBlock)(ObjectType value);
 typedef BOOL (^FBLFunctionalArrayPredicateBlock)(ObjectType value);
 typedef id __nullable (^FBLFunctionalArrayReducerBlock)(id __nullable accumulator,
                                                         ObjectType value);
+typedef id __nullable (^FBLFunctionalArrayGrouperBlock)(ObjectType value);
 
 /**
  Returns an array containing receiver's elements that satisfy the given predicate.
@@ -67,6 +68,11 @@ typedef id __nullable (^FBLFunctionalArrayReducerBlock)(id __nullable accumulato
  have different counts, the resulting array is the same count as the shorter container.
  */
 - (NSArray<NSArray *> *)fbl_zip:(id)container NS_SWIFT_UNAVAILABLE("");
+
+/**
+ Returns a dictionary of array grouppings with a corresponding grouping parameter key recieved from the predicate.
+ */
+-(NSDictionary *)fbl_groupBy:(NS_NOESCAPE FBLFunctionalArrayGrouperBlock)grouper NS_SWIFT_UNAVAILABLE("");
 
 @end
 

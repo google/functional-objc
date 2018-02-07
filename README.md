@@ -94,6 +94,22 @@ NSArray<NSArray *> *zippedArray = [@[ @13, @42, @101 ] fbl_zip:@[ @"100", @"14" 
 XCTAssertEqualObjects(zippedArray, @[ @[ @13, @"100" ], @[ @42, @"14" ] ]);
 ```
 
+
+### GroupBy
+
+Groups items from the collection based on the input predicate.
+
+```objectivec
+NSDictionary<NSString *, NSArray<NSNumber *> *> *resultingDict =
+      [@[ @5, @6, @7 ] fbl_groupBy:^id(NSNumber *value) {
+        if (value.integerValue % 2) {
+          return @"odd";
+        }
+        return @"even";
+      }];
+XCTAssertEqualObjects(resultingDict, @{@"even" : @[ @6 ], @"odd": @[ @5,  @7 ]});
+```
+
 ## Setup
 
 ### CocoaPods
