@@ -112,6 +112,16 @@ pod 'FunctionalObjC', '~> 1.0', :testspecs => ['Tests']
 
 Then, run `pod install`.
 
+### Carthage
+
+Add the following to your `Cartfile`:
+
+```
+github "google/functional-objc"
+```
+
+Then, run `carthage update` and follow the [rest of instructions](https://github.com/Carthage/Carthage#getting-started).
+
 ### Import
 
 Import the umbrella header as:

@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032B8165204629650097BF12 /* NSDictionary+FBLFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NSDictionary+FBLFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		032B8166204629650097BF12 /* NSOrderedSet+FBLFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* NSOrderedSet+FBLFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		032B8167204629650097BF12 /* NSArray+FBLFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* NSArray+FBLFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		032B8168204629650097BF12 /* FBLFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* FBLFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		032B8169204629650097BF12 /* NSSet+FBLFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* NSSet+FBLFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_38 /* NSArray+FBLFunctionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NSArray+FBLFunctionalTests.m */; };
+		OBJ_39 /* NSDictionary+FBLFunctionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NSDictionary+FBLFunctionalTests.m */; };
+		OBJ_40 /* NSOrderedSet+FBLFunctionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* NSOrderedSet+FBLFunctionalTests.m */; };
+		OBJ_41 /* NSSet+FBLFunctionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NSSet+FBLFunctionalTests.m */; };
+		OBJ_43 /* FBLFunctional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "FBLFunctional::FBLFunctional::Product" /* FBLFunctional.framework */; };
+		OBJ_50 /* NSDictionary+FBLFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* NSDictionary+FBLFunctional.m */; };
+		OBJ_51 /* NSObject+FBLFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* NSObject+FBLFunctional.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		032B8162204628AD0097BF12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "FBLFunctional::FBLFunctional";
+			remoteInfo = FBLFunctional;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032B816A2046298C0097BF12 /* framework.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = framework.modulemap; sourceTree = "<group>"; };
+		"FBLFunctional::FBLFunctional::Product" /* FBLFunctional.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLFunctional.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"FBLFunctional::FBLFunctionalTests::Product" /* FBLFunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FBLFunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* NSObject+FBLFunctional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBLFunctional.m"; sourceTree = "<group>"; };
+		OBJ_12 /* NSDictionary+FBLFunctional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FBLFunctional.h"; sourceTree = "<group>"; };
+		OBJ_13 /* NSOrderedSet+FBLFunctional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOrderedSet+FBLFunctional.h"; sourceTree = "<group>"; };
+		OBJ_14 /* NSArray+FBLFunctional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+FBLFunctional.h"; sourceTree = "<group>"; };
+		OBJ_15 /* FBLFunctional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLFunctional.h; sourceTree = "<group>"; };
+		OBJ_16 /* NSSet+FBLFunctional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSet+FBLFunctional.h"; sourceTree = "<group>"; };
+		OBJ_20 /* NSArray+FBLFunctionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FBLFunctionalTests.m"; sourceTree = "<group>"; };
+		OBJ_21 /* NSDictionary+FBLFunctionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FBLFunctionalTests.m"; sourceTree = "<group>"; };
+		OBJ_22 /* NSOrderedSet+FBLFunctionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSOrderedSet+FBLFunctionalTests.m"; sourceTree = "<group>"; };
+		OBJ_23 /* NSSet+FBLFunctionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSet+FBLFunctionalTests.m"; sourceTree = "<group>"; };
+		OBJ_9 /* NSDictionary+FBLFunctional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FBLFunctional.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_43 /* FBLFunctional.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_11 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* FBLFunctional.h */,
+				OBJ_14 /* NSArray+FBLFunctional.h */,
+				OBJ_12 /* NSDictionary+FBLFunctional.h */,
+				OBJ_13 /* NSOrderedSet+FBLFunctional.h */,
+				OBJ_16 /* NSSet+FBLFunctional.h */,
+				032B816A2046298C0097BF12 /* framework.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* FBLFunctionalTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_19 /* FBLFunctionalTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* NSArray+FBLFunctionalTests.m */,
+				OBJ_21 /* NSDictionary+FBLFunctionalTests.m */,
+				OBJ_22 /* NSOrderedSet+FBLFunctionalTests.m */,
+				OBJ_23 /* NSSet+FBLFunctionalTests.m */,
+			);
+			name = FBLFunctionalTests;
+			path = Tests/FBLFunctionalTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"FBLFunctional::FBLFunctionalTests::Product" /* FBLFunctionalTests.xctest */,
+				"FBLFunctional::FBLFunctional::Product" /* FBLFunctional.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_7 /* Sources */,
+				OBJ_18 /* Tests */,
+				OBJ_24 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* FBLFunctional */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* FBLFunctional */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* NSDictionary+FBLFunctional.m */,
+				OBJ_10 /* NSObject+FBLFunctional.m */,
+				OBJ_11 /* include */,
+			);
+			name = FBLFunctional;
+			path = Sources/FBLFunctional;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		032B81642046295E0097BF12 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032B8168204629650097BF12 /* FBLFunctional.h in Headers */,
+				032B8166204629650097BF12 /* NSOrderedSet+FBLFunctional.h in Headers */,
+				032B8165204629650097BF12 /* NSDictionary+FBLFunctional.h in Headers */,
+				032B8167204629650097BF12 /* NSArray+FBLFunctional.h in Headers */,
+				032B8169204629650097BF12 /* NSSet+FBLFunctional.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		"FBLFunctional::FBLFunctional" /* FBLFunctional */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "FBLFunctional" */;
+			buildPhases = (
+				OBJ_49 /* Sources */,
+				OBJ_52 /* Frameworks */,
+				032B81642046295E0097BF12 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBLFunctional;
+			productName = FBLFunctional;
+			productReference = "FBLFunctional::FBLFunctional::Product" /* FBLFunctional.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"FBLFunctional::FBLFunctionalTests" /* FBLFunctionalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "FBLFunctionalTests" */;
+			buildPhases = (
+				OBJ_37 /* Sources */,
+				OBJ_42 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_44 /* PBXTargetDependency */,
+			);
+			name = FBLFunctionalTests;
+			productName = FBLFunctionalTests;
+			productReference = "FBLFunctional::FBLFunctionalTests::Product" /* FBLFunctionalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "FBLFunctional" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"FBLFunctional::FBLFunctionalTests" /* FBLFunctionalTests */,
+				"FBLFunctional::FBLFunctional" /* FBLFunctional */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_38 /* NSArray+FBLFunctionalTests.m in Sources */,
+				OBJ_39 /* NSDictionary+FBLFunctionalTests.m in Sources */,
+				OBJ_40 /* NSOrderedSet+FBLFunctionalTests.m in Sources */,
+				OBJ_41 /* NSSet+FBLFunctionalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_50 /* NSDictionary+FBLFunctional.m in Sources */,
+				OBJ_51 /* NSObject+FBLFunctional.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "FBLFunctional::FBLFunctional" /* FBLFunctional */;
+			targetProxy = 032B8162204628AD0097BF12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/FBLFunctionalTests/include",
+					"$(SRCROOT)/Sources/FBLFunctional/include",
+				);
+				INFOPLIST_FILE = FBLFunctional.xcodeproj/FBLFunctionalTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				TARGET_NAME = FBLFunctionalTests;
+			};
+			name = Debug;
+		};
+		OBJ_36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/FBLFunctionalTests/include",
+					"$(SRCROOT)/Sources/FBLFunctional/include",
+				);
+				INFOPLIST_FILE = FBLFunctional.xcodeproj/FBLFunctionalTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				TARGET_NAME = FBLFunctionalTests;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/FBLFunctional/include",
+				);
+				INFOPLIST_FILE = FBLFunctional.xcodeproj/FBLFunctional_Info.plist;
+				MODULEMAP_FILE = "$(SRCROOT)/Sources/FBLFunctional/include/framework.modulemap";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = FBLFunctional;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = FBLFunctional;
+			};
+			name = Debug;
+		};
+		OBJ_48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/FBLFunctional/include",
+				);
+				INFOPLIST_FILE = FBLFunctional.xcodeproj/FBLFunctional_Info.plist;
+				MODULEMAP_FILE = "$(SRCROOT)/Sources/FBLFunctional/include/framework.modulemap";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = FBLFunctional;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = FBLFunctional;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "FBLFunctional" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_34 /* Build configuration list for PBXNativeTarget "FBLFunctionalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_35 /* Debug */,
+				OBJ_36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_46 /* Build configuration list for PBXNativeTarget "FBLFunctional" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_47 /* Debug */,
+				OBJ_48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'FunctionalObjC'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.authors     = 'Google Inc.'
   s.license     = { :type => 'Apache', :file => 'LICENSE' }
   s.homepage    = 'https://github.com/google/functional-objc'

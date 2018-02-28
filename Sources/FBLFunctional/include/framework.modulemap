@@ -1,4 +1,4 @@
-module FBLFunctional {
+framework module FBLFunctional {
     umbrella header "FBLFunctional.h"
 
     header "NSArray+FBLFunctional.h"
