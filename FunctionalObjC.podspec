@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'FunctionalObjC'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.authors     = 'Google Inc.'
   s.license     = { :type => 'Apache', :file => 'LICENSE' }
   s.homepage    = 'https://github.com/google/functional-objc'
@@ -14,9 +14,10 @@ Pod::Spec.new do |s|
   NSDictionary, NSOrderedSet, and NSSet.
                   DESC
 
-  s.ios.deployment_target  = '9.0'
+  s.ios.deployment_target  = '8.0'
   s.osx.deployment_target  = '10.10'
   s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
 
   s.module_name = 'FBLFunctional'
   s.prefix_header_file = false
