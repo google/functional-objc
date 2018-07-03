@@ -86,43 +86,44 @@ static id __nullable FBLDictionaryReduce(NSDictionary *dictionary, id __nullable
 
 @implementation NSDictionary (FBLFunctionalAdditions)
 
-- (instancetype)fbl_filter:(BOOL (^)(id, id))predicate {
+- (instancetype)fbl_filter:(NS_NOESCAPE BOOL (^)(id, id))predicate {
   NSParameterAssert(predicate);
 
   return FBLDictionaryFilter(self, predicate);
 }
 
-- (nullable id)fbl_first:(BOOL (^)(id, id))predicate {
+- (nullable id)fbl_first:(NS_NOESCAPE BOOL (^)(id, id))predicate {
   NSParameterAssert(predicate);
 
   return FBLDictionaryFirst(self, predicate);
 }
 
-- (NSArray *)fbl_flatMap:(id (^)(id, id))mapper {
+- (NSArray *)fbl_flatMap:(NS_NOESCAPE id (^)(id, id))mapper {
   NSParameterAssert(mapper);
 
   return FBLDictionaryFlatMap(self, mapper);
 }
 
-- (void)fbl_forEach:(void (^)(id, id))block {
+- (void)fbl_forEach:(NS_NOESCAPE void (^)(id, id))block {
   NSParameterAssert(block);
 
   FBLDictionaryForEach(self, block);
 }
 
-- (NSArray *)fbl_map:(id (^)(id, id))mapper {
+- (NSArray *)fbl_map:(NS_NOESCAPE id (^)(id, id))mapper {
   NSParameterAssert(mapper);
 
   return FBLDictionaryMap(self, mapper);
 }
 
-- (NSDictionary *)fbl_mapValues:(id (^)(id))mapper {
+- (NSDictionary *)fbl_mapValues:(NS_NOESCAPE id (^)(id))mapper {
   NSParameterAssert(mapper);
 
   return FBLDictionaryMapValues(self, mapper);
 }
 
-- (nullable id)fbl_reduce:(nullable id)initialValue combine:(id (^)(id, id, id))reducer {
+- (nullable id)fbl_reduce:(nullable NS_NOESCAPE id)initialValue
+                  combine:(NS_NOESCAPE id (^)(id, id, id))reducer {
   NSParameterAssert(reducer);
 
   return FBLDictionaryReduce(self, initialValue, reducer);
