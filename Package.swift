@@ -32,5 +32,11 @@ let package = Package(
         "FBLFunctional",
       ]
     ),
+  ],
+  products: [
+    .library(
+      name: "FBLFunctional",
+      targets: ["FBLFunctional"]
+    )
   ]
 )
