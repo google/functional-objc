@@ -22,6 +22,12 @@ import PackageDescription
 
 let package = Package(
   name: "FBLFunctional",
+  products: [
+    .library(
+      name: "FBLFunctional",
+      targets: ["FBLFunctional"]
+    )
+  ],
   targets: [
     .target(
       name: "FBLFunctional"
